@@ -29,48 +29,49 @@
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        DEFAULT {
             label = "DEFAULT";
 // ------------------------------------------------------------------------------------------------------------
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BSPC      |
+// | TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | \ |
+// | SHFT  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | DEL | ESC  | ALT  | SPACE | CHARACTER |  | NUMBER | SPACE | ALT  |  ?  | ?  |
             bindings = <
 &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSLH
 &kp LSHFT &kp A  &kp S  &kp D  &kp F   &kp G                                  &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B   &kp C_MUTE &kp C_MUTE    &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp ENTER
-                 &mt LGUI DEL &kp ESC &kp LALT &kp SPACE  &mo LOWER    &mo RAISE  &kp SPACE &kp RALT &kp   &kp 
+                 &kp DEL &kp ESC &kp LALT &kp SPACE  &mo CHARACTER   &mo NUMBER  &kp SPACE &kp RALT &kp A   &kp CAPS
                                                                &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        function_layer {
+        FUNCTION {
             label = "FUNCTION";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10  |  F11 |  F12  |
+// |       |  =  |  -  |  +   |  {   |  }   |                   |  [   |  ]    |  ;    |  :   |   \   |       |
 // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
 // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-// |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
+// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |        |  |       |  F7  |  F8   |  F9   |  F10  |  F11 |  F12  |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&kp F1    &kp F2    &kp F3      &kp F4    &kp F5    &kp F6                    &kp F7   &kp F8    &kp F9    &kp F10   &kp F11 &kp F12
+
+&none &none &none &none &none  &none &none &none  &none &none        &none &none  &none &none
 &kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8    &kp N9    &kp N0    &kp PIPE
 &kp TILDE &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp ASTERISK &kp LPAR  &kp RPAR  &none
-&none &none &none &none &none  &none &none &none  &none &none        &none &none  &none &none
+&kp F1    &kp F2    &kp F3      &kp F4    &kp F5    &kp F6    &kp C_MUTE  &kp C_MUTE  &kp F7   &kp F8    &kp F9    &kp F10   &kp F11 &kp F12
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
                                                                    &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        number_layer {
+        NUMBER {
             label = "NUMBER";
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -79,7 +80,7 @@
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
-&trans    &trans    &trans   &trans    &trans  &trans                                 &trans    &trans    &trans   &trans    &trans  &trans
+&trans    &trans    &trans   &trans    &trans  &trans                                 &trans    &kp    &trans   &trans    &trans  &trans
 &trans     &none      &none    &none  &none       &trans                              &none    &none   &trans    &none  &trans &none
 &trans     &none     &none    &none    &none       &none                              &none     &none    &none    &none    &none    &none
 &trans     &none   &none    &none   &none        &trans        &trans      &trans     &trans    &trans   &trans    &trans  &trans &trans
@@ -87,10 +88,10 @@
                                                                          &kp A      &kp B  &kp C &kp D  &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        character_layer {
+        CHARACTER {
             label = "CHARACTER";
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -109,7 +110,7 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-        adjust_layer {
+        CONTROL {
 // ----------------------------------------------------------------------------------------------------------------------------
 // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
 // |        |  |  |  |  |  |                  |      |      |       |      |       |       |
@@ -122,7 +123,10 @@
 &bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &none &none &none &none &none &none
 &none &none  &none  &none &none &none                        &none &none &none &none &none &none
 &none &none  &none  &none  &none &none                       &none &none &none &none &none &none &none  &none
-                                  &none           &none           &none           &none            &none           &none  &none &none &none &none
+                                  &none  &none  &none  &none  &none           &none  &none &none &none &none
+                                                      &kp A      &kp B  &kp C &kp D  &kp E   
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
             >;
         };
 
