@@ -43,9 +43,8 @@
 &kp LSHFT &kp A  &kp S  &kp D  &kp F   &kp G                                  &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B   &kp C_MUTE &kp C_MUTE    &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp ENTER
                  &kp DEL &kp ESC &kp LALT &kp SPACE  &mo CHARACTER   &mo NUMBER  &kp SPACE &kp RALT &kp A   &kp CAPS
-                                                               &kp A      &kp B  &kp C &kp D  &kp E
+                                                               &kp A      &kp B  &kp C &kp D  &kp PSCRN
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -67,7 +66,6 @@
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
                                                                    &kp A      &kp B  &kp C &kp D  &kp E
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -87,7 +85,6 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
                                                                          &kp A      &kp B  &kp C &kp D  &kp E
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -107,7 +104,6 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
                                                                          &kp A      &kp B  &kp C &kp D  &kp E
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
         CONTROL {
@@ -124,7 +120,9 @@
 &none &none  &none  &none &none &none                        &none &none &none &none &none &none
 &none &none  &none  &none  &none &none                       &none &none &none &none &none &none &none  &none
                                   &none  &none  &none  &none  &none           &none  &none &none &none &none
+                                                                     &kp A      &kp B  &kp C &kp D  &kp E
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
