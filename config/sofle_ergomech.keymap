@@ -22,12 +22,13 @@
         compatible = "zmk,conditional-layers";
         adjust_layer {
             if-layers = <CHAR FUNC>;
-            then-layer = <BASE>;
+            then-layer = <DEFAULT>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
         DEFAULT {
             label = "DEFAULT";
 // ------------------------------------------------------------------------------------------------------------
