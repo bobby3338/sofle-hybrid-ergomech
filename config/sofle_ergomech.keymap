@@ -72,7 +72,7 @@
         NUMBER {
             label = "NUMBER";
 // ------------------------------------------------------------------------------------------------------------
-// | ?XX    | XX?  | ?XX  |  XX?  | XXX  |  XX? |                |      |      |       |      |       |       |
+// |     | XX?  | ?XX  |  XX?  | XXX  |  XX? |                |      |      |       |      |       |       |
 // |       | XXX  | XXX | XXX   |       |      |                | PGUP |      |   ^   |      |       |       |
 // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
@@ -98,7 +98,7 @@
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &trans    &trans    &trans   &trans    &trans  &trans                                 &trans    &trans    &trans   &trans    &trans  &trans
-&trans     &none      &none    &none  &none       &trans                              &kp MINUS  &kp EUQAL  &kp LBKT  &kp RBKT  &kp BSLH &kp BSPC
+&trans     &none      &none    &none  &none       &trans                              &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH &kp BSPC
 &trans     &none     &none    &none    &none       &none                              &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp COLON &kp DQT
 &trans     &none   &none    &none   &none        &trans        &trans      &trans     &trans    &trans   &trans    &trans  &trans &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
