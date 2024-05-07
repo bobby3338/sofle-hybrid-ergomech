@@ -14,16 +14,15 @@
 #define FUNCTION 1
 #define CHARACTER 2
 #define NUMBER 3
-#define CONTROL 4
 
 / {
 
-   // Activate ADJUST layer by pressing CHARACTER and NUMBER
+   // Activate FUNCTION layer by pressing CHARACTER and NUMBER
     conditional_layers {
         compatible = "zmk,conditional-layers";
         adjust_layer {
             if-layers = <CHARACTER NUMBER>;
-            then-layer = <CONTROL>;
+            then-layer = <FUNCTION>;
         };
     };
 
