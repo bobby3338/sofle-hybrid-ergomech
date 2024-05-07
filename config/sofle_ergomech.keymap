@@ -38,12 +38,12 @@
 // | CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | DEL | ESC  | ALT  | SPACE | CHARACTER |  | NUMBER | SPACE | ALT  |  ?  | ?  |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
-&kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSLH
-&kp LSHFT &kp A  &kp S  &kp D  &kp F   &kp G                                  &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LCTRL &kp Z  &kp X    &kp C    &kp V  &kp B   &kp PSCRN &kp C_MUTE  &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH  &kp ENTER
-      &kp ESC &kp DEL &kp LALT &kp SPACE  &mo CHAR &mo FUNC &kp SPACE &mo NUMB &kp CAPS &kp RGUI
-                                                              &kp RIGHT &kp UP &kp LEFT &kp DOWN 
+&kp GRAVE &kp N1 &kp N2  &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
+&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSLH
+&kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp H  &kp J &kp K &kp L &kp SEMI &kp SQT
+&kp LCTRL &kp Z  &kp X &kp C &kp V &kp B &kp PSCRN &kp C_MUTE &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp ENTER
+&kp ESC &kp DEL &kp LALT &kp SPACE &mo 2 &mo 1 &kp SPACE &mo 3 &kp CAPS &kp RGUI
+                                       &kp RIGHT &kp UP &kp LEFT &kp DOWN 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
