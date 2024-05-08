@@ -79,9 +79,9 @@
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &trans    &none       &none    &none       &none      &kp PSCRN                                  &none &none &none &none &none &trans
-&trans     &none      &none    &kp PG_UP   &kp PG_DN  &none                             &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH &kp PIPE
+&trans     &none      &none    &kp PG_DN   &kp PG_UP  &kp INS                             &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp LEFT &kp PIPE
 &trans     &kp LEFT  &kp UP    &kp DOWN    &kp RIGHT  &none                              &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp COLON &kp DQT
-&trans     &none     &none     &kp END     &kp HOME   &none        &trans        &kp LPAR    &kp RPAR   &kp LT    &kp GT  &kp QMARK &trans
+&trans     &none     &none     &kp END     &kp HOME   &none        &trans                 &kp LPAR    &kp RPAR   &kp LT    &kp GT  &kp QMARK &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
                                                                          &kp RIGHT  &kp UP  &kp LEFT &kp DOWN 
             >;
@@ -100,7 +100,7 @@
 &trans    &trans    &trans   &trans    &trans  &trans                                 &kp KP_PLUS    &kp NUMBER_7    &kp NUMBER_8   &kp NUMBER_9 &trans  &trans
 &trans     &none      &none    &none  &none       &trans                              &kp KP_MINUS    &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &trans &none
 &trans     &none     &none    &none    &none       &none                              &kp KP_ASTERISK     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &none    &none
-&trans     &none   &none    &none   &none        &trans        &trans                 &kp KP_DIVIDE    &none   &kp KP_N0    &kp KP_DOT  &trans &trans
+&trans     &none   &none    &none   &none        &trans        &trans                 &kp KP_DIVIDE    &none   &kp NUMBER_0  &kp KP_DOT  &trans &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
                                                                          &kp RIGHT  &kp UP  &kp LEFT &kp DOWN 
             >;
