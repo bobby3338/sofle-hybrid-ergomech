@@ -42,7 +42,7 @@
 &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSLH
 &kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp H  &kp J &kp K &kp L &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X &kp C &kp V &kp B &kp C_MUTE &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp ENTER
-&kp ESC &kp DEL &kp LALT &kp SPACE &mo NUMBR &mo FUNCT &kp SPACE &mo CHARA &kp CAPS &kp RGUI
+&kp ESC &kp DEL &kp LALT &kp SPACE &mo CHARA &mo FUNCT &kp SPACE &to NUMBR &kp CAPS &kp RGUI
                                        &kp RIGHT &kp UP &kp LEFT &kp DOWN 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -69,25 +69,6 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        NUMBR {
-            label = "NUMBR";
-// ------------------------------------------------------------------------------------------------------------
-// |     | XX?  | ?XX  |  XX?  | XXX  |  XX? |                |      |      |       |      |       |       |
-// |       | XXX  | XXX | XXX   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//                |      |       |       |      |      |  |      |      |      |       |      |
-            bindings = <
-&trans    &trans    &trans   &trans    &trans  &trans                                 &kp KP_PLUS    &kp NUMBER_7    &kp NUMBER_8   &kp NUMBER_9 &trans  &trans
-&trans     &none      &none    &none  &none       &trans                              &kp KP_MINUS    &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &trans &none
-&trans     &none     &none    &none    &none       &none                              &kp KP_ASTERISK     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &none    &none
-&trans     &none   &none    &none   &none        &trans        &trans                 &kp KP_DIVIDE    &none   &kp KP_N0    &kp KP_DOT  &trans &trans
-                        &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
-                                                                         &kp RIGHT  &kp UP  &kp LEFT &kp DOWN 
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
-        };
-
         CHARA {
             label = "CHARA";
 // ------------------------------------------------------------------------------------------------------------
@@ -101,6 +82,25 @@
 &trans     &none      &none    &kp PG_UP   &kp PG_DN  &none                             &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH &kp PIPE
 &trans     &kp LEFT  &kp UP    &kp DOWN    &kp RIGHT  &none                              &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp COLON &kp DQT
 &trans     &none     &none     &kp END     &kp HOME   &none        &trans        &kp LPAR    &kp RPAR   &kp LT    &kp GT  &kp QMARK &trans
+                        &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
+                                                                         &kp RIGHT  &kp UP  &kp LEFT &kp DOWN 
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        NUMBR {
+            label = "NUMBR";
+// ------------------------------------------------------------------------------------------------------------
+// |     | XX?  | ?XX  |  XX?  | XXX  |  XX? |                |      |      |       |      |       |       |
+// |       | XXX  | XXX | XXX   |       |      |                | PGUP |      |   ^   |      |       |       |
+// |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
+//                |      |       |       |      |      |  |      |      |      |       |      |
+            bindings = <
+&trans    &trans    &trans   &trans    &trans  &trans                                 &kp KP_PLUS    &kp NUMBER_7    &kp NUMBER_8   &kp NUMBER_9 &trans  &trans
+&trans     &none      &none    &none  &none       &trans                              &kp KP_MINUS    &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &trans &none
+&trans     &none     &none    &none    &none       &none                              &kp KP_ASTERISK     &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &none    &none
+&trans     &none   &none    &none   &none        &trans        &trans                 &kp KP_DIVIDE    &none   &kp KP_N0    &kp KP_DOT  &trans &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
                                                                          &kp RIGHT  &kp UP  &kp LEFT &kp DOWN 
             >;
